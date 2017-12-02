@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<% include partials/head.ejs %>
+</head>
+
+<body>
+
+<header>
+    <% include partials/header.ejs %>
+</header>
+
+    <h2>Add a Wine That You Have Tasted</h2>
+    <div class="newInput">
+
+        <form action='/wines' method='POST'>
+            <input class="newInput" type="text" name="name_of_winery" placeholder="Name of Winery" required/>
+            <input class="newInput" type="text" name="year" placeholder="Year" required/>
+            <input class="newInput" type="text" name="region" placeholder="Region" required/>
+            <input class="newInput" type="img" name="url" placeholder="Image Link" />
+            <input class="newInput" type="text" name="submitted_by" placeholder=" Your Name" required/>
+
+            <br/>
+
+            <button type="submit">Create Product</button>
+        </form>
+    </div>
+    <% include partials/footer.ejs%>
+</body>
+</html>

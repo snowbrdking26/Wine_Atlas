@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<% include partials/head.ejs %>
+</head>
+
+<body>
+
+<header>
+    <% include partials/header.ejs %>
+</header>
+    <br>
+    <br>
+    <h2>Edit One of Your Wines</h2>
+    <br>
+
+    <form class="editForm" action="/wines/<%= wine.id %>?_method=PUT" method="POST">
+            
+            <input class="newInput" type="text" name="name_of_winery" value="<%= wine.name_of_winery %>" placeholder="Name of Winery" required />
+
+             
+            <input class="newInput" type="text" name="year" value="<%= wine.year %>" placeholder="Year" required/>
+        
+            <input class="newInput" type="text" name="region" value="<%= wine.region %>" placeholder="Region" required/>
+           
+            <input class="newInput" type="text" name="submitted_by" value="<%= wine.submitted_by %>" placeholder="Submitted By" required />
+            
+            <input class="newInput" type="text" name="image" value="<%= wine.url %>" placeholder="Submitted By" />
+            <br>
+            <br>
+            <div class="editFormBtn">
+                <input type="submit" name="" value="Submit">
+            </div>
+    </form>
+
+
+    <% include partials/footer.ejs%>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<% include partials/head.ejs %>
+  </head>
+  <body>
+
+    <header>
+      <% include partials/header.ejs %>
+    </header>
+
+    <img class="imgShowPage" src='<%= oneWine.url %>' />
+    
+            <br>
+
+  <h3><%= oneWine.name_of_winery %></h3>
+  <h3><%= oneWine.year %></h3>
+  <!-- <h3><%= oneWine.region %></h3> -->
+  <!-- <h3><%= oneWine.submitted_by %></h3> -->
+
+        <br>
+
+    <form action="/wines/<%=oneWine.id; %>/edit">
+      <input type="submit" value="Edit" />
+    </form>
+
+        <br>
+
+    <form action="/wines/<%= oneWine.id;%>?_method=DELETE" method="POST">
+      <input type="submit" value="Delete This Product" />
+    </form>
+
+
+    <div class=formComment>
+      <h3>Add a comment!</h3>
+
+      <form action='/comments' method='post'>
+        <input type='text' name='content' placeholder='Comment' />
+        <input type='text' name='author' placeholder='Your Name' />
+        <input type='hidden' name='wine' value='<%= oneWine._id %>' />
+        <input type='submit' />
+      </form>
+
+    </div>
+
+    <% for (let comment of comments) { %>
+      <p class="content"><%= comment.content %></p>
+      <p class="author"> --<%= comment.author %></p>
+      <br>
+      <% } %>
+
+  <a href="/wines/">
+    <div class=backbtn> Back</div>
+  </a>
+  <br>
+    <% include partials/footer.ejs%>
+  </body>
+</html>
