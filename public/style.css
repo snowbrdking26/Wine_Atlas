@@ -1,5 +1,11 @@
 body {
-  background-color: #DFEAEC;
+  /* background-color: #DFEAEC; */
+  /* background-image: url(images/samuel-zeller-357975.jpg); */
+  /* background-image: url(images/purple-grapes-vineyard-napa-valley.jpeg); */
+  /* background-image: url(images/pexels-photo-12322.jpeg); */
+  background-image: url(images/pexels-photo-360013.jpeg);
+   /* background-image: url(images/purple-grapes-vineyard-napa-valley-napa-vineyard-45209.jpeg); */
+  background-size: cover;
   text-align: center;
   font-family: arial;
   min-width: 500px;
@@ -28,8 +34,8 @@ header {
 }
 
 .addbtn:hover {
-  background-color: #2592D8;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .editForm {
@@ -41,7 +47,7 @@ header {
 }
 
 a {
-    color:#2592D8;
+    color:white;
     text-decoration: none;
     width: 100%;
   }
@@ -80,11 +86,15 @@ h1 {
 }
 
 h2 {
-  color: #2592D8
+  color: white
+}
+
+h3 {
+  color: white;
 }
 
 h4 {
-  color:#769FB6;
+  color:white;
 }
 
 .logOut {
@@ -130,6 +140,7 @@ box-shadow: 0px 0px 5px black;
   margin: 30px auto;
   padding: 0 0 20px 0;
   align-content: left;
+  box-shadow: 3px 3px 18px 3px #71697A ;
     
 }
 
@@ -151,13 +162,15 @@ overflow-wrap: break-word;
 }
 
 .content {
-  margin: 0 0;
+  margin: 0 30%;
   font-size: 22px;
+color: white;
 }
 
 .author {
 margin: 0 0 20px 0;
 font-size:16px;
+color: white;
 }
 
 .titleComment {
