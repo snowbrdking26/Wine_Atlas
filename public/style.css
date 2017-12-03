@@ -134,8 +134,9 @@ h4 {
 .item:hover {
   color: white;
   /* background-color: rgba(252, 245, 199, .4); */
-box-shadow: 0px 0px 5px black;
+  box-shadow: 0px 0px 5px black;
 }
+
 
 .formComment {
   border: solid 1px gray;
