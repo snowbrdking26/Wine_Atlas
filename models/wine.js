@@ -6,7 +6,6 @@ const wineSchema = mongoose.Schema({
   year: { type: String, require: true },
   region: { type: String, require: true },
   url: String,
-  file: String,
   submitted_by: { type: String, require: true }
 });
 

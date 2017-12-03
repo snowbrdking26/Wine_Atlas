@@ -1,9 +1,21 @@
 
-<h1>Wine Atlas</h1>
-<% if (username) { %>
-    <p class="welcome"> Welcome,
-        <%= username %> !</p>
-    <a class="logOut" href="/user/logout">Log out</a>
-    <% }%>
-    
-        <br><br>
+
+    <div class="navDiv">
+        <div class="logo">
+            <h1>Wine Atlas</h1>
+        </div>
+
+
+        <% if (username) { %>
+            <div class="left">
+            <div class="welcome">
+                <h1>Welcome, <%= username %> !</h1>
+            </div>
+            <div class="logOut">
+                <h1><a href="/user/logout">Log out</a></h1>
+            </div>
+            </div>
+        <% }%>
+
+        
+    </div>
