@@ -30,13 +30,14 @@ header {
   border-radius:10px;
   width: 18%;
   text-align: center;
-  margin: 30px 40% 30px
+  margin: 30px 40% 30px;
+  
 }
 
-.addbtn:hover {
-  background-color: white;
-  color: black;
-}
+/* .addbtn:hover {
+  background-color: rgba(252, 245, 199, .2);
+  color: white;
+} */
 
 .editForm {
   margin: 0 37%;
@@ -127,10 +128,12 @@ h4 {
   border: 1px solid grey;
   margin: 3px 3px;
   padding: 1em 1em;
+  background-color: rgba(252, 245, 199, .2);
 }
 
 .item:hover {
   color: white;
+  /* background-color: rgba(252, 245, 199, .4); */
 box-shadow: 0px 0px 5px black;
 }
 
