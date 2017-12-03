@@ -12,13 +12,14 @@
       <% if (message) { %>
         <%= message %>
         <% } %>
-
+      <div class=loginForm>
       <form action="/user/login" method="post">
         Username: <input name="username" /> <br />
         Password: <input name="password" /><br />
 
         <button type="submit">Submit</button>
       </form>
+      </div>
 
     <br>
     <br>
@@ -26,13 +27,15 @@
     <br><br><br>
     <br><br><br>
 
-    
+
       <h2>Register</h2>
+      <div class=loginForm>
       <form action="/user/register" method="post">
              Username: <input name="username" /><br />
             Password: <input name="password" /><br />
           <button type="submit">Register</button>
       </form>
+      </div>
     <% include partials/footer.ejs%>
   </body>
 </html>
