@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose');
 
 const wineSchema = mongoose.Schema({
@@ -5,6 +6,7 @@ const wineSchema = mongoose.Schema({
   year: { type: String, require: true },
   region: { type: String, require: true },
   url: String,
+  file: Object,
   submitted_by: { type: String, require: true }
 });
 

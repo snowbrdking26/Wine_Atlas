@@ -12,10 +12,12 @@
           <div class="addbtn">Add a New Wine!</div>
         </a>
 
-    <div class="container">
+    <div class="containerWine">
         <% for (let i = 0; i < wines.length; i++) { %>
           <div class="item">
-            <a href="/wines/<%= wines[i].id %>/"><img src="<%= wines[i].url %>" />
+            <a href="/wines/<%= wines[i].id %>/"><img src="<%= wines[i].url %>" />  
+            <a href="/wines/<%= wines[i].id %>/"> <%= wines[i].file %>
+          
             <h2><%= wines[i].name_of_winery %></h2>
             <h4><%= wines[i].year %></h4>
             </a>

@@ -8,10 +8,11 @@
     <header>
       <% include partials/header.ejs %>
     </header>
-
+<br><br><br><br><br>
     <img class="imgShowPage" src='<%= oneWine.url %>' />
-    
+    <%= oneWine.file %>
   <br>
+    
 
   <h3><%= oneWine.name_of_winery %></h3>
   <h3><%= oneWine.year %></h3>
@@ -21,13 +22,13 @@
   <br>
 
     <form action="/wines/<%=oneWine.id; %>/edit">
-      <input type="submit" value="Edit" />
+      <input class="btn btn-default btn-xs" type="submit" value="Edit" />
     </form>
 
-  <br>
+    <br>
 
     <form action="/wines/<%= oneWine.id;%>?_method=DELETE" method="POST">
-      <input type="submit" value="Delete This Product" />
+      <input class="btn btn-default btn-xs" type="submit" value="Delete This Product" />
     </form>
 
 
@@ -35,10 +36,10 @@
       <h3>Add a comment!</h3>
 
       <form action='/comments' method='post'>
-        <input type='text' name='content' placeholder='Comment' />
-        <input type='text' name='author' placeholder='Your Name' />
-        <input type='hidden' name='wine' value='<%= oneWine._id %>' />
-        <input type='submit' />
+        <input class="commentWine" type='text' name='content' placeholder='Comment' required />
+        <input class="commentAuthor" type='text' name='author' placeholder='Your Name' required/>
+        <input type='hidden' name='wine' value='<%= oneWine._id %>' /> <br>
+        <input class="btn btn-success" type='submit' />
       </form>
 
     </div>
@@ -50,7 +51,9 @@
       <% } %>
 
   <a href="/wines/">
-    <div class=backbtn> Back</div>
+    <div "backBtn">
+    <div class="btn btn-default"> Back to Home Page</div>
+    </div>
   </a>
   <br>
     <% include partials/footer.ejs%>
