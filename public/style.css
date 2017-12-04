@@ -247,7 +247,7 @@ color: white;
 footer {
   background-color: #71697A;
   color: white;
-  height: 200px;
+  height: 50px;
   text-align: left;
   margin: 30px 0 0 0;
   padding: 0 0 0 20px;
@@ -263,14 +263,41 @@ footer {
 article, aside, figure, footer, header, hgroup, 
   menu, nav, section { display: block; }
 
+
+
+.logoCenter {
+  margin: 20% 40%;
+  font-size: 150px;
+  color: white;
+  letter-spacing: 12px;
+  border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+.mainPictureDiv {
+  height: 800px;
+}
+
+
+
 /* Bootstrap modification */
+
+.container-fluid {
+  background-color: #71697A;
+  
+}
+
+
 
 .navbar {
   height: 70px;
+  background-color: #71697A;
+  
 }
 
 .navbar-nav>li>a {
   padding: 23px;
+  
 }
 
 /* .navbar-nav>li>a:hover {
@@ -281,4 +308,17 @@ article, aside, figure, footer, header, hgroup,
   width: 200px;
   font-size: 32px;
   padding: 23px;
+  /* background-color: #71697A; */
+  
+}
+
+.navbar-inverse .navbar-brand {
+  color: white;
+  /* background-color: #71697A; */
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+  /* background-color: #71697A; */
+
 }

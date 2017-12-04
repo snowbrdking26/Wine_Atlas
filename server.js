@@ -43,6 +43,19 @@ app.use('/wines', wineController);
 app.use('/comments', commentsController);
 app.use('/user', sessionsController);
 
+// Main routes //
+/* Index */
+app.get('/home', function (req, res) {
+  res.render('home.ejs');
+});
+
+/* Log In */
+app.get('/login/', function (req, res) {
+  res.render('login.ejs');
+});// 
+
+
+
 // root route
 app.get('/', (req, res) => res.redirect('/wines'));
 
