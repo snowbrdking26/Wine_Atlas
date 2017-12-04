@@ -4,15 +4,15 @@ const morgan   = require('morgan');
 const session  = require('express-session');
 const bcrypt   = require('bcrypt');
 const app      = express();
-const PORT     = 3004;
+const PORT     = process.env.PORT || 3000;
 
 const hashedString = bcrypt.hashSync('peter', bcrypt.genSaltSync(10));
 console.log(hashedString);
 
 
 // connect to database
-const mongoURI = 'mongodb://localhost:27017/wine_comments';
-mongoose.connect(mongoURI, { useMongoClient: true});
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/wine_comments';
+mongoose.connect(mongoURI, { useMongoClient: true });
 mongoose.Promise = global.Promise;
 
 // test db connection
