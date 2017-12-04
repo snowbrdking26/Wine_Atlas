@@ -1,0 +1,40 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Wine Atlas</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li> <!-- <li class="active"> -->
+                <a href="#">Regions</a>
+            </li>
+            <li>
+                <a href="#">Grape Varieties</a>
+            </li>
+            <li>
+                <a href="#">User Cellars</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <% if (username) { %>
+            <li><span>Welcome,
+                <%= username %> !</span>
+            </li>
+            <li>
+                <a href="/user/logout">
+                    <span class="glyphicon glyphicon-log-out"></span> Log Out</a>
+            </li>
+      
+            <% } else { %>
+            <li>
+                <a href="#">
+                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+            </li>
+            <% } %>
+        </ul>
+
+    </div>
+    </nav>

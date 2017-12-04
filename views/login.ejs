@@ -4,7 +4,37 @@
     <% include partials/head.ejs %>
   </head>
   <body>
-    <header><h1>Wine Atlas</h1></header>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Wine Atlas</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active">
+            <a href="#">Regions</a>
+          </li>
+          <li>
+            <a href="#">Grape Varieties</a>
+          </li>
+          <li>
+            <a href="#">User Cellars</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-log-in"></span> Login</a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+              </li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <!-- <header><h1>Wine Atlas</h1></header> -->
 
     <br><br>
       <h2>Login</h2>

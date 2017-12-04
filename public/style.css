@@ -262,3 +262,23 @@ footer {
 
 article, aside, figure, footer, header, hgroup, 
   menu, nav, section { display: block; }
+
+/* Bootstrap modification */
+
+.navbar {
+  height: 70px;
+}
+
+.navbar-nav>li>a {
+  padding: 23px;
+}
+
+/* .navbar-nav>li>a:hover {
+  background-color: blue;
+} */
+
+.navbar-brand {
+  width: 200px;
+  font-size: 32px;
+  padding: 23px;
+}
