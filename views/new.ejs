@@ -9,7 +9,7 @@
 <% include partials/nav.ejs %>
 
 
-    <h2>Add a Wine That You Have Tasted</h2>
+    <h3>Add a Wine That You Have Tasted To Your Cellar</h3>
     <div class="newInput">
 
     <form action='/wines' method='POST'>
@@ -18,12 +18,9 @@
         <input class="newInput" type="text" name="region" placeholder="Region" required/>
         <input class="newInput" type="text" name="submitted_by" placeholder=" Your Name" required/>
         <input class="newInput" type="img" name="url" placeholder="Image Link" />
-            <input class="newInput" type="file" onchange="readURL(this);" name="file" placeholder="Image Link"/>
+           
 
-<br/>
-
-    <img id="file" src="#" alt="testing choosefile img" />
-
+<br>
 <br>
 
             <button type="submit">Create Product</button>

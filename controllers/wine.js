@@ -9,6 +9,18 @@ const Comment = require('../models/comments.js');
 //middleware
 router.use(methodOverride('_method'));
 
+
+// Main routes //
+/* Index */
+router.get('/home', function (req, res) {
+  console.log("================");
+  console.log(req.session);
+  res.render('home.ejs', {
+    username: req.session.username
+  });
+});
+
+
   // Index route  ------------------1
   router.get('/', async (req, res) => {
     const allWine = await Wine.find();
@@ -41,6 +53,9 @@ router.post('/', async (req, res) => {
     res.send(err.message);
   }
 });
+
+
+
 
 
 // Show route      -----------------4
@@ -80,6 +95,13 @@ router.delete('/:id', async (req, res) => {
   // wines.splice(req.params.index, 1);
   res.redirect('/wines');
 });
+
+
+
+// /* Log In */
+// app.get('/login/', function (req, res) {
+//   res.render('login.ejs');
+// });//
 
 
 

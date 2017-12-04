@@ -32,7 +32,7 @@ header {
   width: 18%;
   text-align: center;
   margin: 30px 40% 30px;
-  
+
 }
 
 /* .addbtn:hover {
@@ -69,7 +69,7 @@ a {
 .newInput {
   display: block;
   text-align: center;
-  margin: 5px 35%;
+  margin: 5px 30%;
   padding: 10px 0px;
   background-color: rgba(245, 245, 220, 1);
 }
@@ -209,7 +209,7 @@ h4 {
   padding: 0 0 20px 0;
   align-content: left;
   box-shadow: 3px 3px 18px 3px #71697A ;
-    
+
 }
 
 .commentWine {
@@ -265,28 +265,25 @@ footer {
 
 
 .logoCenter {
-  margin: 20% 40%;
-  font-size: 150px;
+  background-color: rgba(252, 245, 199, .2);
+  margin: 20% 35%;
+  font-size: 100px;
   color: white;
-  letter-spacing: 12px;
+  letter-spacing: 5px;
   border-top: 3px solid white;
     border-bottom: 3px solid white;
 }
 
 .mainPictureDiv {
-  height: 800px;
+  height: 500px;
 }
-
-
 
 /* Bootstrap modification */
 
 .container-fluid {
   background-color: #71697A;
-  
+
 }
-
-
 
 .navbar {
   height: 70px;
@@ -306,7 +303,7 @@ footer {
   font-size: 32px;
   padding: 23px;
   /* background-color: #71697A; */
-  
+
 }
 
 .navbar-inverse {
