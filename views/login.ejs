@@ -4,7 +4,7 @@
     <% include partials/head.ejs %>
   </head>
   <body>
-    
+    <!-- need to fix nav bar partial -->
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -39,10 +39,10 @@
 
     <br><br>
       <h2>Login</h2>
-
-      <% if (message) { %>
-        <%= message %>
-        <% } %>
+<!-- update for node wizard hat -->
+       <!-- if (message) { 
+        message 
+        }  -->
       <div class=loginForm>
       <form action="/user/login" method="post">
         Username: <input name="username" /> <br />

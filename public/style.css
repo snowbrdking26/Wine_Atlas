@@ -61,6 +61,7 @@ a {
     width: 100%;
   }
 
+
   a:hover {
     text-decoration: none;
   }
@@ -260,8 +261,6 @@ footer {
 }
 
 
-article, aside, figure, footer, header, hgroup, 
-  menu, nav, section { display: block; }
 
 
 
@@ -292,12 +291,10 @@ article, aside, figure, footer, header, hgroup,
 .navbar {
   height: 70px;
   background-color: #71697A;
-  
 }
 
 .navbar-nav>li>a {
   padding: 23px;
-  
 }
 
 /* .navbar-nav>li>a:hover {
@@ -312,13 +309,25 @@ article, aside, figure, footer, header, hgroup,
   
 }
 
+.navbar-inverse {
+    border: none;
+}
+
 .navbar-inverse .navbar-brand {
   color: white;
+
   /* background-color: #71697A; */
 }
 
 .navbar-inverse .navbar-nav>li>a {
   color: white;
+  /* background-color: #71697A; */
+
+}
+.navbar-inverse .navbar-nav>li>span {
+  color: white;
+  display: block;
+  padding: 23px;
   /* background-color: #71697A; */
 
 }
