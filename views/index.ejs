@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
   <% include partials/head.ejs %>
-  </head>
-  <body>
-    <header>
-      <% include partials/header.ejs %>
-    </header>
-<br>
-<br>
-        <a href="/wines/new">
-          
-          <div class="btn btn-default"> Add a Wine Bottle </div>
-        </a>
-<br>
-<br>
+</head>
+
+<body>
+  <header>
+    <% include partials/header.ejs %>
+  </header>
+  <br>
+  <br>
+  <a href="/wines/new">
+
+    <div class="btn btn-default"> Add a Wine Bottle </div>
+  </a>
+  <br>
+  <br>
     <div class="containerWine">
         <% for (let i = 0; i < wines.length; i++) { %>
           <div class="item">
@@ -29,7 +31,6 @@
     </div>
     
         <br><br>
-
      <% include partials/footer.ejs%>
   </body>
 </html>
