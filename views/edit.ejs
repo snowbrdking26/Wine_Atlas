@@ -9,7 +9,7 @@
 <% include partials/nav.ejs %>
 
     <br><br>
-        <h2>Edit One of Your Wines</h2>
+        <h2 class="center">Edit One of Your Wines</h2>
     <br>
 
     <form class="editForm" action="/wines/<%= wine.id %>?_method=PUT" method="POST">
@@ -19,6 +19,8 @@
             <input class="newInput" type="text" name="year" value="<%= wine.year %>" placeholder="Year" required/>
         
             <input class="newInput" type="text" name="region" value="<%= wine.region %>" placeholder="Region" required/>
+
+            <input class="newInput" type="text" name="country" value="<%= wine.country %>" placeholder="Country" required/>
            
             <input class="newInput" type="text" name="submitted_by" value="<%= wine.submitted_by %>" placeholder="Submitted By" required />
             
@@ -26,12 +28,13 @@
                 <br>
                 <br>
             <div class="editFormBtn">
-                <input type="submit" name="" value="Submit">
+                <input class="btn btn-primary" type="submit" name="" value="Submit">
+   
             </div>
     </form>
 <br>
     <a href="/wines/">
-        <div "backBtn">
+        <div class="backBtn  center">
             <div class="btn btn-default"> Back to Home Page</div>
         </div>
     </a>

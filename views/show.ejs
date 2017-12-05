@@ -6,31 +6,31 @@
   <body>
 <% include partials/nav.ejs %>
 
-   
-    <br><br><br><br><br>
-    <img class="imgShowPage" src='<%= oneWine.url %>' />
+<!-- start flex box -->
+<div class="showPageFlexDiv">
+  <div class="productShowDiv">
+    <img class="imgShowPage" src='<%= oneWine.url %>' /><br>
+  </div>
+  <div class="productInfoDiv">
+      <h3 class="productInfoh3"><%= oneWine.name_of_winery %></h3>
+      <h3 class="productInfoh3"><%= oneWine.year %></h3>
+      <h3 class="productInfoh3"><%= oneWine.region %></h3>
+      <h3 class="productInfoh3">
+        <%= oneWine.country %>
+      </h3>
+      <!-- <h3><%= oneWine.submitted_by %></h3> -->
 
-  <br>
-    
-
-  <h3><%= oneWine.name_of_winery %></h3>
-  <h3><%= oneWine.year %></h3>
-  <!-- <h3><%= oneWine.region %></h3> -->
-  <!-- <h3><%= oneWine.submitted_by %></h3> -->
-
-  <br>
-
+<br>
     <form action="/wines/<%=oneWine.id; %>/edit">
-      <input class="btn btn-default btn-xs" type="submit" value="Edit" />
+      <input class="btn btn-default btn" type="submit" value="Edit" />
     </form>
-
-    <br>
-
+<br>
     <form action="/wines/<%= oneWine.id;%>?_method=DELETE" method="POST">
-      <input class="btn btn-default btn-xs" type="submit" value="Delete This Product" />
+      <input class="btn btn-default btn" type="submit" value="Remove From Cellar" />
     </form>
-
-
+    </div>
+</div>
+<div class="commentsShowDiv">
     <div class=formComment>
       <h3>Add a comment!</h3>
 
@@ -49,11 +49,16 @@
       <br>
       <% } %>
 
+      </div>
+  
+    <!-- end flex box -->
+
   <a href="/wines/">
-    <div "backBtn">
-    <div class="btn btn-default"> Back to Home Page</div>
+    <div class="backBtn center">
+    <div class="btn btn-default "> Back to Home Page</div>
     </div>
   </a>
+
 
   <br>
     <% include partials/footer.ejs%>
