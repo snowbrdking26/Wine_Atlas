@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <% include partials/head.ejs %>
+</head>
+
+<body>
+
+    <% include partials/nav.ejs %>
+        <div class="mainPictureDiv">
+
+
+        <!-- start sign up -->
+            <div class="modal-text-boxLogin">
+                <div id="openLoginModal">
+                    <h2 class="modalH2">Sign Up</h2>
+                    <form action="/user/register" method="post">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input class="form-control" name="username" placeholder="Enter Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password">
+
+                        </div>
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+
+        <!-- end sign up -->
+
+
+
+        </div>
+        <% include partials/footer.ejs%>
+</body>
+
+</html>

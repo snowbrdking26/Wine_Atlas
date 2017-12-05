@@ -31,6 +31,13 @@ router.post('/login', async (req, res) => {
 
 });
 
+router.get('/register', (req, res, next) => {
+  res.render('register.ejs', {
+    message: req.session.message,
+    username: req.session.username
+  });
+});
+
 router.post('/register', async (req,res,next) => {
   const password = req.body.password;
   const passwordHash = bcrypt.hashSync(password,
@@ -67,7 +74,7 @@ router.post('/', (req, res) => {
 
 router.get('/logout', (req, res) => {
   req.session.destroy();
-  res.redirect('/');
+  res.redirect('/wines/home');
 });
 
 router.get('/update', (req, res) => {

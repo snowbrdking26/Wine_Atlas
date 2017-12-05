@@ -8,13 +8,41 @@
 
 <body>
     <% include partials/nav.ejs %>
-    <%# <nav class="navbar"></nav>%>
 
     <div class="mainPictureDiv">
             <div class="logoCenter">
             Wine Atlas
             </div>
     </div>
+
+    <!-- Modal sign up -->
+    <div class="modal fade" id="signUp" role="dialog">
+        <div class="modal-text-boxLogin">
+            <div id="openLoginModal">
+                <h2 class="modalH2">Sign Up</h2>
+                <form action="/user/register" method="post">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input class="form-control" name="username" placeholder="Enter Username">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" name="password" class="form-control" id="pwd" placeholder="Enter password">
+    
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember me</label>
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+    
+            </div>
+        </div>
+    </div>
+    <!-- end modal sign up -->
+
+    
 
     <% include partials/footer.ejs%>
 </body>
