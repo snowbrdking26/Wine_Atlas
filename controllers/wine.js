@@ -10,8 +10,8 @@ const Comment = require('../models/comments.js');
 router.use(methodOverride('_method'));
 
 
-// Main routes //
-/* Index */
+// Main pages //
+/* Home page */
 router.get('/home', function (req, res) {
   console.log("================");
   console.log(req.session);
@@ -20,6 +20,35 @@ router.get('/home', function (req, res) {
   });
 });
 
+/* Regions page */
+router.get('/regions', function (req, res) {
+  console.log("================");
+  console.log(req.session);
+  res.render('regions.ejs', {
+    username: req.session.username
+  });
+});
+
+/* Regions page */
+router.get('/grape-varieties', function (req, res) {
+  console.log("================");
+  console.log(req.session);
+  res.render('grape-varieties.ejs', {
+    username: req.session.username
+  });
+});
+
+/* User Cellars page */
+router.get('/user-cellars', function (req, res) {
+  console.log("================");
+  console.log(req.session);
+  res.render('user-cellars.ejs', {
+    username: req.session.username
+  });
+});
+
+
+////////// the 7 Routes ////////////
 
   // Index route  ------------------1
   router.get('/', async (req, res) => {

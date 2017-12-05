@@ -44,22 +44,6 @@ app.use('/comments', commentsController);
 app.use('/user', sessionsController);
 
 
-// app.use('/home', homeController);
-// app.use('/user/login', loginController);
-
-// Main routes //
-/* Index */
-// app.get('/home', function (req, res) {
-//   res.render('home.ejs', {
-//   username: req.session.username
-//   });
-// });
-//
-// /* Log In */
-// app.get('/login/', function (req, res) {
-//   res.render('login.ejs');
-// });//
-
 
 
 // root route
