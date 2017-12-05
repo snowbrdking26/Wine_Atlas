@@ -244,10 +244,14 @@ overflow-wrap: break-word;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
 }
 
 .green {
   margin: 10px 10px;
+}
+textarea {
+  font-family: arial sans-serif;
 }
 
 
