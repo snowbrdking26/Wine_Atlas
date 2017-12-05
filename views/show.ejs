@@ -30,37 +30,92 @@
     </form>
     </div>
 </div>
-<div class="commentsShowDiv">
-    <div class=formComment>
-      <h3>Add a comment!</h3>
 
-      <form action='/comments' method='post'>
-        <input class="commentWine" type='text' name='content' placeholder='Comment' required />
-        <input class="commentAuthor" type='text' name='author' placeholder='Your Name' required/>
-        <input type='hidden' name='wine' value='<%= oneWine._id %>' /> <br>
-        <input class="btn btn-success" type='submit' />
-      </form>
-
-    </div>
-
-    <% for (let comment of comments) { %>
-      <p class="content"><%= comment.content %></p>
-      <p class="author"> --<%= comment.author %></p>
-      <br>
-      <% } %>
-
-      </div>
   
     <!-- end flex box -->
 
-  <a href="/wines/">
-    <div class="backBtn center">
-    <div class="btn btn-default "> Back to Home Page</div>
+
+
+<!-- comments on show page -->
+<!-- https://bootsnipp.com/snippets/featured/comment-box -->
+
+<div class="commentsFullWidth">
+  <div class="container">
+    <div class="row">
     </div>
-  </a>
+  
+    <div class="row">
+  
+      <div class="col-md-6">
+        <div class="widget-area no-padding blank">
+          <div class="status-upload">
+          <form action='/comments' method='post'>
+              <textarea type='text' name='content' placeholder='Comment' required ></textarea>
+             
+            <input type='hidden' name='wine' value='<%= oneWine._id %>' />
+         <div class="flexCommentSubmit">
+            <input class="commentAuthor" type='text' name='author' placeholder='Your Name' required/>
+              <button type="submit" class="btn btn-success green">
+                <i class="fa fa-share"></i> Share</button>
+          </div>
+            </form>
+          </div>
+          <!-- Status Upload  -->
+        </div>
+        <!-- Widget Area -->
+      </div>
+  
+    </div>
+  </div>
 
 
-  <br>
+  <!-- comment positng area -->
+    <% for (let comment of comments) { %>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <br>
+      </div>
+      <!-- /col-sm-12 -->
+    </div>
+    <!-- /row -->
+    <div class="row">
+      <div class="col-sm-1">
+        <div class="thumbnail">
+          <img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+        </div>
+        <!-- /thumbnail -->
+      </div>
+      <!-- /col-sm-1 -->
+  
+      <div class="col-sm-5">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong><%= comment.author %></strong>
+            <span class="text-muted">commented 5 days ago</span>
+          </div>
+          <div class="panel-body">
+                  <%= comment.content %>
+                <br>
+          </div>
+          <!-- /panel-body -->
+        </div>
+        <!-- /panel panel-default -->
+      </div>
+      <!-- /col-sm-5 -->
+    </div>
+    <!-- /row -->
+  </div>
+  <% } %>
+  <!-- /container -->
+
+    <a href="/wines/">
+      <div class="backBtn center">
+        <div class="btn btn-default "> Back to Home Page</div>
+      </div>
+    </a>
+
+</div>
     <% include partials/footer.ejs%>
   </body>
 </html>
