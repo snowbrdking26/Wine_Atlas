@@ -349,6 +349,11 @@ footer {
   text-align: center;
 }
 
+.mainPictureDivHome {
+  height: 500px;
+  text-align: center;
+}
+
 .modal-backdrop {
   z-index: 1;
 }
