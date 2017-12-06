@@ -19,6 +19,7 @@
   "homepage": "https://github.com/snowbrdking26/Wine_Atlas#readme",
   "dependencies": {
     "bcrypt": "^1.0.3",
+    "dotenv": "^4.0.0",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "express-session": "^1.15.6",

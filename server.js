@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express  = require('express');
 const mongoose = require('mongoose');
 const morgan   = require('morgan');
@@ -9,6 +10,10 @@ const PORT     = process.env.PORT || 3000;
 const hashedString = bcrypt.hashSync('peter', bcrypt.genSaltSync(10));
 console.log(hashedString);
 
+// google maps API
+console.log(process.env.test)
+console.log(process.env.APIKEY)
+console.log(process.env.wineKey)
 
 // connect to database
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/wine_comments';

@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const router  = express.Router();
 const methodOverride = require('method-override');
@@ -25,6 +26,7 @@ router.get('/regions', function (req, res) {
   console.log("================");
   console.log(req.session);
   res.render('regions.ejs', {
+    env: process.env,
     username: req.session.username
   });
 });
