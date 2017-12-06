@@ -6,6 +6,24 @@
 // });
 
 
+
+
+// side nav menu  -----------------------
+// https://www.w3schools.com/howto/howto_js_sidenav.asp
+
+// function openNav() {
+//     "use strict";
+//     document.getElementById("mySidenav").style.width = "250px";
+// }
+
+// function closeNav() {
+//     "use strict";
+//     document.getElementById("mySidenav").style.width = "0";
+// }
+
+//end side nav  -----------------------
+
+
         // This sample uses the Place Autocomplete widget to allow the user to search
         // for and select a place. The sample then displays an info window containing
         // the place ID and other information about the place that the user has
@@ -67,4 +85,22 @@
             });
         }
  
- 
+//  wine api info
+
+// const getWineData = () => {
+//     let variety = 
+// }
+
+// var keyNames = Wines.keys();
+// for (var i in keyNames) {
+//     console.log(i);
+// }
+// const wineData = wine.getElementById('name');
+// for (var i in wineData) {
+//     console.log(i)
+   
+// }
+// 
+
+
+

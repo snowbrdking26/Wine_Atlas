@@ -15,7 +15,6 @@ body {
 
 header {
   background-color: #71697A;
-
 }
 
 .backbtn{
@@ -555,11 +554,9 @@ body .no-padding {
   margin-right: 7px;
   }
 
+/* google maps -------------------------- */
 
-
-/* google maps */
-
-  html, body {
+html, body {
         height: 100%;
         margin: 0;
         padding: 0;
@@ -592,6 +589,18 @@ body .no-padding {
     border-color: #4d90fe;
 }
 
+.thumbnail {
+  max-height: 98px;
+  max-width: 76px;
+}
+
+.col-md-6 {
+width: 100%;
+}
+
+.col-sm-5 {
+  width:90%;
+}
 
 /* google maps snippet */
 /* https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder */

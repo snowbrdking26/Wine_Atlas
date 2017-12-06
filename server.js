@@ -10,7 +10,7 @@ const PORT     = process.env.PORT || 3000;
 const hashedString = bcrypt.hashSync('peter', bcrypt.genSaltSync(10));
 console.log(hashedString);
 
-// google maps API
+// google maps API & snooth API
 console.log(process.env.test)
 console.log(process.env.APIKEY)
 console.log(process.env.wineKey)
