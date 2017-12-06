@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const express  = require('express');
 const mongoose = require('mongoose');
 const morgan   = require('morgan');
@@ -6,6 +6,18 @@ const session  = require('express-session');
 const bcrypt   = require('bcrypt');
 const app      = express();
 const PORT     = process.env.PORT || 3000;
+const wineKey  = process.env.wineKey;
+// const winedb = require('http://api.snooth.com/wines/?akey=<%=env.wineKey%>&ip=66.28.234.115&q=napa+cabernet&xp=30') 
+const winedb = require('request');
+
+app.get('/wineApi/:query',  (req, res) => {
+  const response =  winedb('http://api.snooth.com/wines/?akey='+ wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=30',(err,response,body) => {
+    // console.log(body);
+    res.json(JSON.parse(body));
+  });
+
+
+});
 
 const hashedString = bcrypt.hashSync('peter', bcrypt.genSaltSync(10));
 console.log(hashedString);
