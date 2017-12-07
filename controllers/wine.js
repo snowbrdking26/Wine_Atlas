@@ -37,30 +37,12 @@ router.get('/regions/:country', async (req, res) => {
   console.log(req.params.country)
   const countryCode = req.params.country;
   // const country = await Wine.find(req.params.country);
-  const responseWineDb = await winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&c=' + countryCode + '&xp=15', (err, responseWineDb, body) => {
+  const responseWineDb = await winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&c=' + countryCode + '&xp=15&mr=1', (err, responseWineDb, body) => {
 
     const wines = JSON.parse(body);
     // res.send(wines);
     
     res.render('regions.ejs', {
-      env: process.env,
-      username: req.session.username,
-      wines: wines.wines
-    });
-  });
-});
-
-
-/* Grape-varieties page */
-router.get('/grape-varieties', function (req, res) {
-  const responseWineDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=20&c=usa', (err, responseWineDb, body) => {
-    // console.log(body);
-    // res.json(JSON.parse(body));
-    const wines = JSON.parse(body);
-
-    // console.log(wines.wines[0].region);
-    // res.send(wines);
-    res.render('grape-varieties.ejs', {
       env: process.env,
       username: req.session.username,
       wines: wines.wines
@@ -78,13 +60,21 @@ router.get('/home', function (req, res) {
   });
 });
 
-/* Grape Varieties page */
-router.get('/grape-varieties', function (req, res) {
-  console.log("================");
-  console.log(req.session);
-  res.render('grape-varieties.ejs', {
-    username: req.session.username
+/* grape-varieties page */
+router.get('/grape-varieties/:color', async (req, res) => {
+  console.log('++++++++');
+  console.log(req.params.color);
+  const color = req.params.color;
+  const responseWineDb = await winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&color=' + color + '&xp=20&mr=4', (err, responseWineDb, body) => {
 
+    const wines = JSON.parse(body);
+    // res.send(wines);
+console.log('+++++++++++++++++++++', wines);
+    res.render('grape-varieties.ejs', {
+      env: process.env,
+      username: req.session.username,
+      wines: wines.wines
+    });
   });
 });
 

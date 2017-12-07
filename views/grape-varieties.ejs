@@ -19,14 +19,15 @@
         <div class="w3-center">
             <div class="w3-bar">
                 <div class="chooseWineBtnflex">
-        
-                    <!-- <form action="/regions/France" method="GET">
-                        <button class="w3-button w3-white w3-border" value="France">French Wine under $15</button>
-                    </form> -->
-        
-                    <button class="w3-button w3-white w3-border">Highest Ranked Red Wine under $15</button>
-                    <button class="w3-button w3-white w3-border">Highest Ranked Rose Wine under $15</button>
-                    <button class="w3-button w3-white w3-border">Highest Ranked White Wine under $15</button>
+                <form action="/wines/grape-varieties/red" method="GET">
+                    <button class="w3-button w3-white w3-border">Highest Ranked Red Wine under $20</button>
+                    </form>
+                <form action="/wines/grape-varieties/rose" method="GET">
+                    <button class="w3-button w3-white w3-border">Highest Ranked Rose Wine under $20</button>
+                    </form>
+                <form action="/wines/grape-varieties/white" method="GET">
+                    <button class="w3-button w3-white w3-border">Highest Ranked White Wine under $20</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -37,24 +38,27 @@
         <% for (let wine of wines) { %>
             <div class="w3-quarter">
                 <img style="max-width: 100%; height:auto;" src='<%= wine.image %>' />
-                <h3 style="border-bottom: 1px solid lightgray" class="wineListData">
-                    <%= wine.name %>
-                </h3>
-                <h4 class="wineListData">
-                    <%= wine.varietal %>
-                </h4>
+            <h3 class="wineListData">
+                <%= wine.name %>
+            </h3>
+            <h4 class="wineListData borderTop">
+                <%= wine.varietal %>
+            </h4>
                 <h4 class="wineListData">Type:
                     <%= wine.type %>
                 </h4>
-                <h4 class="wineListData">Merchants:
-                    <%= wine.num_merchants %>
+                <h4 class="wineListData">
+                    </h4>
+                    <div class="rating">
+                <% for (let i=0; i< wine.snoothrank; i++) {  %>
+                        <div class="star">☆</div>
+                <% } %>
+            </div>
+                <h4 class="wineListData">$<%= wine.price %>
                 </h4>
-                <h4 class="wineListData">Ranking:
-                    <%= wine.snoothrank %>
-                </h4>
-                <h4 class="wineListData">$
-                    <%= wine.price %>
-                </h4>
+                <h7 class="wineListData">Available at
+                    <%= wine.num_merchants %> stores
+                </h7>
                 <a href="<%= wine.link%>">
                     <h6 style="color:gray;">More Info</h6>
                 </a>
