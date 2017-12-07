@@ -35,8 +35,8 @@
 
         function initMap() {
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 44.9130, lng: 0.2440 },
-                zoom: 8
+                center: { lat: 38.2975, lng: -95.2869 },
+                zoom: 2
             });
 
             var input = document.getElementById('pac-input');
