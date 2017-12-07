@@ -12,6 +12,7 @@ const Comment = require('../models/comments.js');
 //middleware
 router.use(methodOverride('_method'));
 
+
 /* Regions page */
 router.get('/regions', function (req, res) {
   const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=20&c=usa', (err, responseWindDb, body) => {
@@ -19,7 +20,7 @@ router.get('/regions', function (req, res) {
     // res.json(JSON.parse(body));
     const wines = JSON.parse(body);
 
-    console.log(wines.wines[0].region);
+    // console.log(wines.wines[0].region);
     // res.send(wines);
     res.render('regions.ejs', {
       env: process.env,
@@ -30,24 +31,38 @@ router.get('/regions', function (req, res) {
 });
 
 //Regions query data
-// router.get('/regions/:query', (req, res) => {
-//   const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=30', (err, responseWindDb, body) => {
-//     // console.log(body);
-//     // res.json(JSON.parse(body));
-//     const wines = JSON.parse(body);
+router.get('/regions/country', async (req, res) => {
+  console.log('++++++++');
+  const country = await Wine.find(req.params.country);
+  const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&c='+ country +'&xp=15', (err, responseWindDb, body) => {
 
-//     console.log(wines.wines);
-//     // res.send(wines.wines);
-//     res.render('regions.ejs', {
-//       env: process.env,
-//       username: req.session.username,
-//       wines: wines.wines
-//     });
-//   });
-// });
-
+    const wines = JSON.parse(body);
+res.send(wines);
+    // res.render('regions.ejs', {
+    //   env: process.env,
+    //   username: req.session.username,
+    //   wines: wines.wines
+    // });
+  });
+});
 
 
+/* Grape-varieties page */
+router.get('/grape-varieties', function (req, res) {
+  const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=20&c=usa', (err, responseWindDb, body) => {
+    // console.log(body);
+    // res.json(JSON.parse(body));
+    const wines = JSON.parse(body);
+
+    // console.log(wines.wines[0].region);
+    // res.send(wines);
+    res.render('grape-varieties.ejs', {
+      env: process.env,
+      username: req.session.username,
+      wines: wines.wines
+    });
+  });
+});
 
 
 /* Home page */

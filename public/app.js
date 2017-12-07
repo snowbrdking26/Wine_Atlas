@@ -85,22 +85,6 @@
             });
         }
  
-//  wine api info
-
-// const getWineData = () => {
-//     let variety = 
-// }
-
-// var keyNames = Wines.keys();
-// for (var i in keyNames) {
-//     console.log(i);
-// }
-// const wineData = wine.getElementById('name');
-// for (var i in wineData) {
-//     console.log(i)
-   
-// }
-// 
 
 
 
