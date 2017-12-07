@@ -2,6 +2,8 @@ require('dotenv').config()
 const express = require('express');
 const router  = express.Router();
 const methodOverride = require('method-override');
+const wineKey = process.env.wineKey;
+const winedb = require('request');
 
 // models
 const Wine = require('../models/wine.js');
@@ -10,8 +12,44 @@ const Comment = require('../models/comments.js');
 //middleware
 router.use(methodOverride('_method'));
 
+/* Regions page */
+router.get('/regions', function (req, res) {
+  const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=30', (err, responseWindDb, body) => {
+    // console.log(body);
+    // res.json(JSON.parse(body));
+    const wines = JSON.parse(body);
 
-// Main pages //
+    console.log(wines.wines[0].region);
+    // res.send(wines);
+    res.render('regions.ejs', {
+      env: process.env,
+      username: req.session.username,
+      wines: wines
+    });
+  });
+});
+
+//Regions query data
+// router.get('/regions/:query', (req, res) => {
+//   const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=30', (err, responseWindDb, body) => {
+//     // console.log(body);
+//     // res.json(JSON.parse(body));
+//     const wines = JSON.parse(body);
+
+//     console.log(wines.wines);
+//     // res.send(wines.wines);
+//     res.render('regions.ejs', {
+//       env: process.env,
+//       username: req.session.username,
+//       wines: wines.wines
+//     });
+//   });
+// });
+
+
+
+
+
 /* Home page */
 router.get('/home', function (req, res) {
   console.log("================");
@@ -21,22 +59,13 @@ router.get('/home', function (req, res) {
   });
 });
 
-/* Regions page */
-router.get('/regions', function (req, res) {
-  console.log("================");
-  console.log(req.session);
-  res.render('regions.ejs', {
-    env: process.env,
-    username: req.session.username
-  });
-});
-
-/* Regions page */
+/* Grape Varieties page */
 router.get('/grape-varieties', function (req, res) {
   console.log("================");
   console.log(req.session);
   res.render('grape-varieties.ejs', {
     username: req.session.username
+
   });
 });
 
@@ -84,8 +113,6 @@ router.post('/', async (req, res) => {
     res.send(err.message);
   }
 });
-
-
 
 
 
