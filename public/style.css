@@ -427,6 +427,29 @@ footer {
 
 }
 
+/* w3schools */
+/* https://www.w3schools.com/w3css/tryw3css_templates_food_blog.htm */
+
+.w3-main {
+  background-image: url(images/dust_scratches.png);
+  max-width: 100%;
+  margin-top:100px;
+}
+
+.wineListData {
+  color: black;
+}
+
+.w3-quarter {
+   height: 500px;
+   width: 265px;
+}
+
+.chooseWineBtnflex {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
 
 
 /* comments at bottom of show page */

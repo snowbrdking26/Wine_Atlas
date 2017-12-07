@@ -14,7 +14,7 @@ router.use(methodOverride('_method'));
 
 /* Regions page */
 router.get('/regions', function (req, res) {
-  const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=30', (err, responseWindDb, body) => {
+  const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=20&c=usa', (err, responseWindDb, body) => {
     // console.log(body);
     // res.json(JSON.parse(body));
     const wines = JSON.parse(body);

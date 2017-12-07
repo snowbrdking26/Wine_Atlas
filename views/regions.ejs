@@ -16,20 +16,37 @@
             <h1 class="logoh1">Regions</h1>
         </div>
 </div>
-
-
+<div class="w3-center">
+    <div class="w3-bar">
+        <div class="chooseWineBtnflex">
+            <button class="w3-button w3-white w3-border">Napa Wine under $20</button>
+            <button class="w3-button w3-white w3-border">French Wine under $15</button>
+            <button class="w3-button w3-white w3-border">Spanish Wine under $15</button>
+            <button class="w3-button w3-white w3-border">New Zealeand Wine under $15</button>
+            <button class="w3-button w3-white w3-border">Argentina Wine under $15</button>
+            <button class="w3-button w3-white w3-border">Italian Wine under $15</button>
+        </div>
+    </div>
+</div>
 <!-- wine region categories -->
-
-
+        <!-- //need to parse the region data -->
+<div class="w3-main w3-content w3-padding">
+    <div class="w3-row-padding w3-padding-16 w3-center">
+<!-- for (let i = 0; i < 5; i++) { -->
 <% for (let wine of wines) { %>
-
-<h4 class="center">
-    <%= wine.region %>
-</h4>
-
+    <div class="w3-quarter">
+        <img style="max-width: 100%; height:auto;" src='<%= wine.image %>' />
+        <h3 class="wineListData"><%= wine.winery %></h3>
+        <h3 class="wineListData"><%= wine.varietal %></h3>
+        <h4 class="wineListData">Type: <%= wine.type %></h4>
+        <h4 class="wineListData">Merchants: <%= wine.num_merchants %></h4>
+        <h4 class="wineListData">Ranking: <%= wine.snoothrank %></h4>
+        <h4 class="wineListData">$<%= wine.price %></h4>
+    </div>
 <% } %>
-
-
+</div>
+</div>
+num_merchants
 <div class="mapArea">
     <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
     <div id="map"></div>
