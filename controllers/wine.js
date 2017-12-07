@@ -24,7 +24,7 @@ router.get('/regions', function (req, res) {
     res.render('regions.ejs', {
       env: process.env,
       username: req.session.username,
-      wines: wines
+      wines: wines.wines
     });
   });
 });

@@ -11,7 +11,7 @@ const winedb   = require('request');
 
 
 // google maps ... has API on the regions.ejs page
-// const wineKey ... is API for snooth
+// const wineKey ... is API for snooth wine
 // const winedb ... is the snooth database request
 
 // connect to database

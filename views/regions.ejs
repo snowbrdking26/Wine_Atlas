@@ -19,10 +19,15 @@
 
 
 <!-- wine region categories -->
-<h2 class="center">
-    <%= wines.wines[0].region %>
-</h2>
 
+
+<% for (let wine of wines) { %>
+
+<h4 class="center">
+    <%= wine.region %>
+</h4>
+
+<% } %>
 
 
 <div class="mapArea">
