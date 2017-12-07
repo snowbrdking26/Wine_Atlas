@@ -4,7 +4,7 @@ const router  = express.Router();
 const methodOverride = require('method-override');
 const wineKey = process.env.wineKey;
 const winedb = require('request');
-// const  country = 
+
 // models
 const Wine = require('../models/wine.js');
 const Comment = require('../models/comments.js');
@@ -15,7 +15,7 @@ router.use(methodOverride('_method'));
 
 /* Regions page */
 router.get('/regions', function (req, res) {
-  const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=20&c=usa', (err, responseWindDb, body) => {
+  const responseWineDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=wine&xp=20&c=US', (err, responseWineDb, body) => {
     // console.log(body);
     // res.json(JSON.parse(body));
     const wines = JSON.parse(body);
@@ -25,31 +25,35 @@ router.get('/regions', function (req, res) {
     res.render('regions.ejs', {
       env: process.env,
       username: req.session.username,
-      wines: wines.wines
+      wines: wines.wines,
+      wineKey: process.env.wineKey
     });
   });
 });
 
-//Regions query data
-router.get('/regions/country', async (req, res) => {
+// Regions query data
+router.get('/regions/:country', async (req, res) => {
   console.log('++++++++');
-  const country = await Wine.find(req.params.country);
-  const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&c='+ country +'&xp=15', (err, responseWindDb, body) => {
+  console.log(req.params.country)
+  const countryCode = req.params.country;
+  // const country = await Wine.find(req.params.country);
+  const responseWineDb = await winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&c=' + countryCode + '&xp=15', (err, responseWineDb, body) => {
 
     const wines = JSON.parse(body);
-res.send(wines);
-    // res.render('regions.ejs', {
-    //   env: process.env,
-    //   username: req.session.username,
-    //   wines: wines.wines
-    // });
+    // res.send(wines);
+    
+    res.render('regions.ejs', {
+      env: process.env,
+      username: req.session.username,
+      wines: wines.wines
+    });
   });
 });
 
 
 /* Grape-varieties page */
 router.get('/grape-varieties', function (req, res) {
-  const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=20&c=usa', (err, responseWindDb, body) => {
+  const responseWineDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=20&c=usa', (err, responseWineDb, body) => {
     // console.log(body);
     // res.json(JSON.parse(body));
     const wines = JSON.parse(body);

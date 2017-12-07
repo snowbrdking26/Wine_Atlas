@@ -87,4 +87,22 @@
  
 
 
+///////////////////////////////////// NOTES
+// /* Regions page */
+// router.get('/regions', function (req, res) {
+//     const responseWindDb = winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=napa+cabernet&xp=20&c=usa', (err, responseWindDb, body) => {
+//         // console.log(body);
+//         // res.json(JSON.parse(body));
+//         const wines = JSON.parse(body);
+
+//         // console.log(wines.wines[0].region);
+//         // res.send(wines);
+//         res.render('regions.ejs', {
+//             env: process.env,
+//             username: req.session.username,
+//             wines: wines.wines
+//         });
+//     });
+// });
+
 
