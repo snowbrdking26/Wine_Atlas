@@ -39,10 +39,24 @@ header {
 }
 
 .backbtn{
-    margin: 5px 40%;
+    margin: 150px 40% 50px 40%;
     padding: 5px 5px;
     text-align: center;
   }
+
+  .formNew {
+    margin: 75px 30%;
+  }
+
+.w3-blue {
+  background-color: beige!important;
+  color: #4F6367!important;
+  text-align: center;
+}
+
+.w3-container > h4 {
+  color: #71697A!important;
+}
 
 .addbtn{
   padding: 5px 5px;
@@ -86,6 +100,7 @@ a {
     color:white;
     text-decoration: none;
     width: 100%;
+    padding: auto 5px;
   }
 
 
@@ -415,7 +430,9 @@ footer {
 }
 
 .navbar-nav>li>a {
-  padding: 23px;
+  padding: 4px 10px;
+  margin: 20px 0px;
+  border-left: 1px solid white;
 }
 
 

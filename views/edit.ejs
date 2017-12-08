@@ -8,31 +8,47 @@
 <body>
 <% include partials/nav.ejs %>
 
-    <br><br>
-        <h2 class="center">Edit One of Your Wines</h2>
-    <br>
 
-    <form class="editForm" action="/wines/<%= wine.id %>?_method=PUT" method="POST">
-            
-            <input class="newInput" type="text" name="name_of_winery" value="<%= wine.name_of_winery %>" placeholder="Name of Winery" required />
+<div class="formNew">
+    <div class="w3-container w3-blue">
+        <h4 class="h4navColor">Edit One of Your Wines</h4>
+    </div>
 
-            <input class="newInput" type="text" name="year" value="<%= wine.year %>" placeholder="Year" required/>
-        
-            <input class="newInput" type="text" name="region" value="<%= wine.region %>" placeholder="Region" required/>
+    <form class="w3-container" action="/wines/<%= wine.id %>?_method=PUT" method="POST">
 
-            <input class="newInput" type="text" name="country" value="<%= wine.country %>" placeholder="Country" required/>
-           
-            <input class="newInput" type="text" name="submitted_by" value="<%= wine.submitted_by %>" placeholder="Submitted By" required />
-            
-            <input class="newInput" type="text" name="url" value="<%= wine.url %>" placeholder="Image Link" />
-                <br>
-                <br>
-            <div class="editFormBtn">
-                <input class="btn btn-primary" type="submit" name="" value="Submit">
-   
-            </div>
+
+        <p>
+            <input class="w3-input" type="text" name="name_of_winery" value="<%= wine.name_of_winery %>" placeholder="Name of Winery" required/>
+
+        </p>
+        <p>
+            <input class="w3-input" type="text" name="year" value="<%= wine.year %>" placeholder="Year" required/>
+        </p>
+        <p>
+
+            <input class="w3-input" type="text" name="region" value="<%= wine.region %>" placeholder="Region" required/>
+        </p>
+        <p>
+            <input class="w3-input" type="text" name="country" value="<%= wine.country %>" placeholder="Country" required/>
+        </p>
+        <p>
+            <input class="w3-input" type="text" name="submitted_by" value="<%= wine.submitted_by %>" placeholder="Your Name" />
+        </p>
+        <p>
+            <input class="w3-input" type="img" name="url" value="<%= wine.url %>" placeholder="Image Link" />
+
+        </p>
+
+
+        <div class="text-center">
+            <button class="btn btn-indigo">Send
+                <i class="fa fa-paper-plane-o ml-1"></i>
+            </button>
+        </div>
+
     </form>
-<br>
+</div>
+
     <a href="/wines/">
         <div class="backBtn  center">
             <div class="btn btn-default"> Back to Home Page</div>

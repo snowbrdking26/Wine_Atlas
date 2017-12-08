@@ -7,11 +7,51 @@
 
 <body>
 <% include partials/nav.ejs %>
+<div class="formNew">
+<div class="w3-container w3-blue">
+    <h4 class="h4navColor">Add a New Wine</h4>
+</div>
 
-<div class="center">
-    <h3>Add a Wine That You Have Tasted To Your Cellar</h3>
+<form class="w3-container" action='/wines' method='POST'>
+    
+
+    <p>
+    <input class="w3-input" type="text" name="name_of_winery" placeholder="Name of Winery" required/> 
+       
+    </p>
+    <p>
+       <input class="w3-input" type="text" name="year" placeholder="Year" required/> 
+    </p>
+    <p>
+
+    <input class="w3-input" type="text" name="region" placeholder="Region" required/> 
+    </p>
+    <p>
+         <input class="w3-input" type="text" name="country" placeholder="Country" required/> 
+    </p>
+    <p>
+            <input class="w3-input" type="text" name="submitted_by" placeholder="Your Name"/> 
+    </p>
+    <p>
+    <input class="w3-input" type="img" name="url" placeholder="Image Link"/> 
+            
+        </p>
+
+
+    <div class="text-center">
+        <button class="btn btn-indigo">Send
+            <i class="fa fa-paper-plane-o ml-1"></i>
+        </button>
     </div>
-    <div class="newInput">
+
+</form>
+</div>
+
+
+
+<!-- <div class="center">
+</div>
+<div class="newInput">
 
     <form action='/wines' method='POST'>
         <input class="newInput" type="text" name="name_of_winery" placeholder="Name of Winery" required/>
@@ -27,13 +67,13 @@
 
             <button type="submit">Create Product</button>
         </form>
-    </div>
+    </div> -->
 
 
 
     <a href="/wines/">
         <div class="backbtn">
-            <div class="btn btn-default"> Back to Home Page</div>
+            <div class="btn btn-default"> Back to User Recommendations</div>
         </div>
     </a>
 
