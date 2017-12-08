@@ -52,7 +52,7 @@ router.get('/regions/:country', async (req, res) => {
   console.log(req.params.country)
   const countryCode = req.params.country;
   // const country = await Wine.find(req.params.country);
-  const responseWineDb = await winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&c=' + countryCode + '&xp=15&mr=1', (err, responseWineDb, body) => {
+  const responseWineDb = await winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&c=' + countryCode + '&xp=20&mr=1', (err, responseWineDb, body) => {
 
     const wines = JSON.parse(body);
     // res.send(wines);
@@ -83,7 +83,6 @@ router.get('/grape-varieties/:color', async (req, res) => {
   console.log(req.params.color);
   const color = req.params.color;
   const responseWineDb = await winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&color=' + color + '&xp=20&mr=4', (err, responseWineDb, body) => {
-
     const wines = JSON.parse(body);
     // res.send(wines);
 console.log('+++++++++++++++++++++', wines);
