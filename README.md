@@ -4,11 +4,11 @@
 
 https://wine-atlas.herokuapp.com/wines/home/
 
-*This is a working full-stack application using Node.js Mongoose, Express and EJS.
-*The file structure of MVC Models Views and Controller was also used to build this app.
-*Bcrypt was used for password encryption
-*There are 7 RESTful routes and full CRUD.
-*The app is available on Heroku
+* This is a working full-stack application using Node.js Mongoose, Express and EJS.
+* The file structure of MVC Models Views and Controller was also used to build this app.
+* Bcrypt was used for password encryption
+* There are 7 RESTful routes and full CRUD.
+* The app is available on Heroku
 
 
 ## Other goals achieved:
