@@ -31,6 +31,21 @@ router.get('/regions', function (req, res) {
   });
 });
 
+router.get('/regions/highpricewines', async (req, res) => {
+  console.log('++++asdfasdfasdfasdf++++');
+  const responseWineDb = await winedb('http://api.snooth.com/wines/?akey=' + wineKey + '&ip=66.28.234.115&q=wine&mp=1000', (err, responseWineDb, body) => {
+
+    const wines = JSON.parse(body);
+    // res.send(wines);
+
+    res.render('regions.ejs', {
+      env: process.env,
+      username: req.session.username,
+      wines: wines.wines
+    });
+  });
+});
+
 // Regions query data
 router.get('/regions/:country', async (req, res) => {
   console.log('++++++++');
@@ -49,6 +64,8 @@ router.get('/regions/:country', async (req, res) => {
     });
   });
 });
+
+
 
 
 /* Home page */

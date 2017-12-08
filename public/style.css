@@ -490,6 +490,17 @@ flex-wrap: wrap;
 justify-content: center;
 }
 
+.wineGlasses {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10% 12% 0 12%;
+}
+
+.smallWineGlasses {
+  height: 150px;
+  width: auto;
+}
 
 /* comments at bottom of show page */
 /* https://bootsnipp.com/snippets/featured/comment-box */
@@ -668,7 +679,7 @@ width: 100%;
 /* https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder */
 
         #map {
-            height: 80%;
+            height: 70%;
         }
 
         /* Optional: Makes the sample page fill the window. */
