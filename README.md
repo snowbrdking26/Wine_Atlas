@@ -61,9 +61,13 @@ Allows users to submit comments on uploaded wines in the recommend wines section
 <img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/CommentSection.png" width="700">
 
 
+### Google Maps
+Allows users to research the location of where their wine was grown and is essential to a wine atlas.
+
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/googlemaps.png" width="700">
 
 
 
 
 
-Thank you to the instructors, TA's and fellow classmates that helped with this project.
+Thank you to the instructors, TA's, and fellow classmates that helped with this project.
