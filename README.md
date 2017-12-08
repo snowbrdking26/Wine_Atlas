@@ -27,44 +27,44 @@ Bootstrap, bootsnipp.com, and w3schools.com/howto/ had nice template like featur
 
 ### The homepage of the Wine Atlas.
 
-<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/HomeScreen.png" width="700">
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/HomeScreen.png" width="750">
 
 ### The login page
 To access the Wine Atlas's user recommended wines. However, the Countries page and Grape Varieties pages are open for browsing to non-registered users.
 
-<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/Login.png" width="700">
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/Login.png" width="750">
 
 ### The recommended wines page
 This is the central page for users. It is where recommended user wines are displayed, added, edited, and deleted.
 
-<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/userRecommendedWines.png" width="700">
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/userRecommendedWines.png" width="750">
 
 ### The add a new wine page
 Allows users to add a new recommended wine.
 
-<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/addAnewWine.png" width="700">
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/addAnewWine.png" width="750">
 
 ### The Grape Varieties page
 Allows users to sort through the Snooth Wine API data by selecting Red, Rose, White wine categories that each return the highest rated 4 or 5 star wines that are under $20.
 
-<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/GrapeVarietiesPage.png" width="700">
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/GrapeVarietiesPage.png" width="750">
 
 ### The countries page
 Sorts through the Snooth Wine API data I created buttons to quickly sort into categories of price & country. As well as highest priced wines category.
 
-<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/CountriesPage.png" width="700">
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/CountriesPage.png" width="750">
 
 
 ### The comment section
 Allows users to submit comments on uploaded wines in the recommend wines section.
 
-<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/CommentSection.png" width="700">
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/CommentSection.png" width="750">
 
 
 ### Google Maps
 Allows users to research the location of where their wine was grown and is essential to a wine atlas.
 
-<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/googlemaps.png" width="700">
+<img src="https://github.com/snowbrdking26/Wine_Atlas/blob/master/public/images/googlemaps.png" width="750">
 
 
 
