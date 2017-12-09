@@ -11,15 +11,14 @@
 // side nav menu  -----------------------
 // https://www.w3schools.com/howto/howto_js_sidenav.asp
 
-// function openNav() {
-//     "use strict";
-//     document.getElementById("mySidenav").style.width = "250px";
-// }
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
 
-// function closeNav() {
-//     "use strict";
-//     document.getElementById("mySidenav").style.width = "0";
-// }
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
 
 //end side nav  -----------------------
 

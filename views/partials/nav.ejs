@@ -1,51 +1,64 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <title></title>
+</head>
 
-<nav class="newNavBar">
+<body>
 
+    <nav class="newNavBar">
         <div class="NewNavBarLeft">
             <div class="NewNavBarDiv">
                 <a class="newlogoAtag" href="/wines/home/">Wine Atlas</a>
             </div>
-
-            <div class="NewNavBarli">
-                <a class="NewNavBara" href="/wines/regions">Countries</a>
+                
+                    <div class="NewNavBarli">
+                        <a class="NewNavBara" href="/wines/regions">Countries</a>
+                    </div>
+                    <div class="NewNavBarli">
+                        <a class="NewNavBara" href="/wines/grape-varieties/red">Grape Varieties</a>
+                    </div>
+                    <div class="NewNavBarli">
+                        <a class="NewNavBara" href="/wines">User Wines</a>
+                    </div>
+              
             </div>
-            <div class="NewNavBarli">
-                <a class="NewNavBara" href="/wines/grape-varieties/red">Grape Varieties</a>
-            </div>
-            <div class="NewNavBarli">
-                <a class="NewNavBara" href="/wines">User Recommendations</a>
-            </div>
-        </div>
-  
-
         <div class="NewNavBarLoginRegister">
-            <% if (username) { %>
-            <div class="NewNavBarli">
-                <span class="NewNavBara">Welcome,
-                <%= username %> !</span>
-            </div>
-            <div class="NewNavBarli">
-                <a class="NewNavBara" href="/user/logout">
-                    <span class="glyphicon glyphicon-log-out"></span> Log Out</a>
-            </div>
-      
-            <% } else { %>
-           
-            <div class="NewNavBarli">
-                <a class="NewNavBara" href="/user/login">
-                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
-            </div>
-            <div class="NewNavBarli">
-                <a class="NewNavBara" href="/user/register">
-                    <span class="glyphicon glyphicon-user"></span> Sign Up</a>
-            </div>
-            <% } %>
+            <%if (username) { %>
+                <div class="NewNavBarli">
+                    <span class="NewNavBaraWelcome">Welcome,
+                        <%= username %> !</span>
+                </div>
+                <div class="NewNavBarli">
+                    <a class="NewNavBara" href="/user/logout">
+                        <span class="glyphicon glyphicon-log-out"></span> Log Out</a>
+                </div>
+                
+                <%} else { %>
+                    <div class="NewNavBarli">
+                        <a class="NewNavBara" href="/user/login">
+                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </div>
+                    <div class="NewNavBarli">
+                        <a class="NewNavBara" href="/user/register">
+                            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                    </div>
+                    <%} %>
+                    <div class="NewNavBarli">
+                        <span class="MenuThreeLinesSymbol" onclick="openNav()">Menu &#9776;</span>
+                    </div>
+                        <div class="sidenav" id="mySidenav">
+                            <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
+                            <a class="NewNavBara" href="/wines/grape-varieties/red">Grape Varieties</a>
+                            <a class="NewNavBara" href="/wines/regions">Countries</a>
+                            <a class="NewNavBara" href="/wines">User Wines</a>
+                        </div>
+                        
         </div>
-
-
-
     </nav>
+</body>
 
+</html>
          
          

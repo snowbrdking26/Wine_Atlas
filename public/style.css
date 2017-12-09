@@ -7,6 +7,7 @@ body {
    /* background-image: url(images/purple-grapes-vineyard-napa-valley-napa-vineyard-45209.jpeg); */
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100%;
   font-family: arial;
   min-width: 900px;
   margin: 0 auto;
@@ -755,17 +756,34 @@ width: 100%;
     color: white;
     text-align: center;
     margin: 5px 5px;
-    padding: 5px 5px;;;
+    padding: 5px 5px;
     text-decoration: none;
-    /* border: 1px solid red; */
+
 }
 
+.NewNavBaraWelcome {
+    display: block;
+    color: white;
+    text-align: center;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    text-decoration: none;
+
+}
+
+.NewNavBarDiv:hover {
+  color: #BAB5C0;
+}
 
 .newlogoAtag {
   font-size: 30px;
     margin: 5px 5px;
     padding: 5px 5px;
-    }
+}
+
+.newlogoAtag:hover {
+  color: #BAB5C0;
+}
 
 
 .NewNavBarDiv {
@@ -775,20 +793,74 @@ width: 100%;
     
 }
 
-.NewNavBara:hover {
- color: white;
-}
-
 .NewNavBarli {
   color: white;
- margin: 5px 5px;
-    padding: 5px 5px;
+  margin: 5px 5px;
+  padding: 5px 5px;
 }
 
+.NewNavBara:hover {
+  color: #BAB5C0;
+}
 
+/*side nav*/
 
+.MenuThreeLinesSymbol {
+	color: white;
+	color: white;
+  margin: 5px 5px;
+  padding: 5px 5px;
+	float: right;
+	font-size: 16px;
+	cursor: pointer;
+}
 
+.MenuThreeLinesSymbol:hover {
+  color: #BAB5C0;
+}
 
+.name{
+	float: left;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 12px 8px 12px 12px;
+    text-decoration: none;
+    color: #71697A;
+    display: block;
+    transition: 0.3s;
+    text-align: left;
+}
+
+.sidenav {
+  width: 0px;
+  font-size: 20px;
+}
+
+.sidenav a:hover {
+  color: #71697A
+}
+.closebtn {
+    position: absolute;
+    top: 0px;
+    color: #71697A;
+    margin: 5px 5px;
+    padding: 5px 5px;
+    font-size: 36px;
+}
 
 
 
