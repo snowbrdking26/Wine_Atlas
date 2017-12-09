@@ -10,11 +10,11 @@
 <body>
     <% include partials/nav.ejs %>
 
-    <div class="mainPictureDiv">
+
         <div class="logoCenter">
             <h1 class="logoh1">Countries</h1>
         </div>
-</div>
+
 <div class="w3-main w3-content w3-padding">
 <div class="w3-center">
     <div class="w3-bar">
@@ -84,7 +84,7 @@
     </div>
     <% } %>
 </div>
-</div>
+
 
 <div class="mapArea">
     <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
@@ -99,7 +99,7 @@
 </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=<%=env.APIKEY%>&libraries=places&callback=initMap" async defer></script>
-
+</div>
   
 
     <% include partials/footer.ejs%>

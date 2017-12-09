@@ -25,6 +25,10 @@
               
             </div>
         <div class="NewNavBarLoginRegister">
+            <div class="NewNavBarli">
+                <span class="MenuThreeLinesSymbol" onclick="openNav()">Menu &#9776;</span>
+            </div>
+            
             <%if (username) { %>
                 <div class="NewNavBarli">
                     <span class="NewNavBaraWelcome">Welcome,
@@ -45,9 +49,7 @@
                             <span class="glyphicon glyphicon-user"></span> Sign Up</a>
                     </div>
                     <%} %>
-                    <div class="NewNavBarli">
-                        <span class="MenuThreeLinesSymbol" onclick="openNav()">Menu &#9776;</span>
-                    </div>
+                    
                         <div class="sidenav" id="mySidenav">
                             <a class="closebtn" href="javascript:void(0)" onclick="closeNav()">&times;</a>
                             <a class="NewNavBara" href="/wines/grape-varieties/red">Grape Varieties</a>
