@@ -312,13 +312,19 @@ color: white;
 }
 
 .imgShowPage {
-  height: 250px;
-  width: auto;
+    #position: relative;
+    #top: -50%;
+    margin: 0 auto;
+    width: 210px;
+
+
   box-shadow: 3px 3px 18px 3px #71697A ;
-  margin: 0 10px;
+
+  /* margin: auto 10px; */
 }
 
 .productShowDiv {
+  vertical-align: middle;
 text-align: center;
 margin: 0 10px;
 }
@@ -343,11 +349,9 @@ background-image: url(images/dust_scratches.png);
 background-size: cover;
 }
 
-
-
 .productInfoDiv {
   text-align: left;
-  width: 100%;
+  width: 210px;
   padding: 2% 5% 5% 5%;
   background-color: beige;
 
