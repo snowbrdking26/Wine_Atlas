@@ -320,13 +320,15 @@ color: white;
   display: flex;
   flex-direction: row;
   margin: 10% 15%;
+  max-width: 70%;
 }
 
 .commentsShowDiv {
 text-align: center;
 background-color: #D2E4C4;
 padding: 1% 0;
-margin: 5% 15% ;
+margin: 5% 15%;
+
 }
 
 .commentsFullWidth {
