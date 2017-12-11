@@ -11,8 +11,8 @@ body {
   background-repeat: no-repeat;
    background-attachment: fixed;
     background-position: center; 
-  /* height: 100%; */
-  /* width: 100%; */
+  height: 100%;
+  width: 100%;
   font-family: arial;
   min-width: 700px;
   margin: 0 auto;
@@ -148,12 +148,7 @@ img {
   margin: 10px 10px;
 }
 
-.imgShowPage {
-  height: 100%;
-  width: auto;
-  box-shadow: 3px 3px 18px 3px #71697A ;
-  margin: 0 10px;
-}
+
 
 button {
   margin: 5px;
@@ -316,11 +311,23 @@ color: white;
   text-align: center;
 }
 
+.imgShowPage {
+  height: 80%;
+  width: auto;
+  box-shadow: 3px 3px 18px 3px #71697A ;
+  margin: 0 10px;
+}
+
+.productShowDiv {
+text-align: center;
+margin: 0 10px;
+}
+
 .showPageFlexDiv {
   display: flex;
   flex-direction: row;
   margin: 10% 20%;
-  width: 60%;
+  width: 30%;
 }
 
 .commentsShowDiv {
@@ -336,10 +343,7 @@ background-image: url(images/dust_scratches.png);
 background-size: cover;
 }
 
-.productShowDiv {
-text-align: center;
-margin: 0 10px;
-}
+
 
 .productInfoDiv {
   text-align: left;
