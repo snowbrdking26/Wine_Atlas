@@ -315,8 +315,9 @@ color: white;
     #position: relative;
     #top: -50%;
     margin: 0 auto;
-    width: 210px;
+    width: auto;
     height: auto;
+    max-height: 550px;
 
 
   box-shadow: 3px 3px 18px 3px #71697A ;
@@ -326,15 +327,18 @@ color: white;
 
 .productShowDiv {
   vertical-align: middle;
-text-align: center;
-margin: 0 10px;
+  text-align: center;
+  margin: 0 10px;
+  max-height: 550px;
+  
 }
 
 .showPageFlexDiv {
   display: flex;
   flex-direction: row;
-  margin: 10% 20%;
-  width: 40%;
+  justify-content: center;  
+  margin: 10% 40%;
+  height: 550px;
 }
 
 .commentsShowDiv {
@@ -352,8 +356,8 @@ background-size: cover;
 
 .productInfoDiv {
   text-align: left;
-  width: 210px;
-  padding: 2% 5% 5% 5%;
+  width: 250px;
+  padding: 5px 20px ;
   background-color: beige;
 
 }
@@ -382,6 +386,8 @@ footer {
 }
 
 .logoCenter {
+  display: flex;
+  justify-content: center;
   font-size: 50px;
   color: white;
   letter-spacing: 5px;
@@ -404,6 +410,7 @@ footer {
   border-top: 3px solid white;
   border-bottom: 3px solid white;
   text-align: center;
+  margin: 0 0;
 }
 
 .mainPictureDiv {
