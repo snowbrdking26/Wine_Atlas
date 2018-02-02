@@ -11,10 +11,10 @@ body {
   background-repeat: no-repeat;
    background-attachment: fixed;
     background-position: center; 
-  height: 100%;
-  width: 100%;
+  /* height: 100%; */
+  /* width: 100%; */
   font-family: arial;
-  min-width: 700px;
+  min-width: 900px;
   margin: 0 auto;
 }
 
@@ -24,9 +24,10 @@ body {
 }
 
 .mainImageAroundLogo {
-  width: 100%;
-  min-width: 700px;
-  min-height: 600px;
+  /* width: 100%; */
+  min-width: 900px;
+  max-width: 100%;
+  /* height: 900px; */
   height: auto;
   margin: 0;
 }
@@ -39,7 +40,7 @@ body {
   font-size: 50px;
   color: white;
   letter-spacing: 5px;
-  margin: 20% 35%;
+  margin: 20% 35% 20% 35%;
 }
 
 
