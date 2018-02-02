@@ -5,7 +5,7 @@ const morgan   = require('morgan');
 const session  = require('express-session');
 const bcrypt   = require('bcrypt');
 const app      = express();
-const PORT     = process.env.PORT || 3000;
+const PORT     = process.env.PORT || 3002;
 const wineKey  = process.env.wineKey;
 const winedb   = require('request');
 
