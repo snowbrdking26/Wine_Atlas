@@ -7,16 +7,38 @@
 
 <body>
     <% include partials/nav.ejs %>
+<div class="containingImageMain">
+    <img class="mainImageAroundLogo" src="/images/pexels-photo-360013.jpeg" alt="vineyard">
 
-        <div class="containingImageMain">
-            <img class="mainImageAroundLogo" src="/images/pexels-photo-360013.jpeg" alt="vineyard">
-
-            <div class="MainLogoCenter">
-                <h1 class="logoh1 ">Wine Atlas</h1>
+    <div class="MainLogoCenter">
+        <h1 class="logoh1 ">Wine Atlas</h1>
+    </div>
+</div>
+<div class="chooseSquaresHome">
+    <div class="squares1">
+        Track Your Favorite Wines
+            <div>
+                <a href="/user/register">Join Member Portal</a>
+            <div>
+                <br>
+            <div>Manage Your Wines</div>
+                <a href="/user/login">Login</a>
             </div>
         </div>
+
+    </div>
+    <div class="squares2">
+        <br>
+        <a href="/wines/regions">Top Rated Wines Under $20 per Country</a>
+        </div>
+    <div class="squares3">
+        <br>
+        <a href="/wines/grape-varieties/red"> Best Wines in Each Grape Variety</a>
+        </div>
+</div>
 
         <% include partials/footer.ejs%>
 </body>
 
 </html>
+<a href=""></a>

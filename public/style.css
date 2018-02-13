@@ -441,6 +441,33 @@ footer {
   text-align: center;
 }
 
+.chooseSquaresHome {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.squares1 {
+background-color: #99C2A2;
+width:33%;
+padding:100px 7%;
+text-align: center;
+}
+
+.squares2 {
+background-color: #6E7E85;
+width:34%;
+padding:100px 7%;
+text-align: center;
+}
+
+.squares3 {
+background-color: #93B1A7;
+width:33%;
+padding:100px 7%;
+text-align: center;
+}
+
 .modal-backdrop {
   z-index: 1;
 }
