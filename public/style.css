@@ -14,24 +14,24 @@ body {
   /* height: 100%; */
   /* width: 100%; */
   font-family: arial;
-  min-width: 900px;
+  min-width: 500px;
   margin: 0 auto;
 }
 
 .containingImageMain {
   position: relative;
-
+  width: 100%;
+  repeat: no-repeat;
 }
 
 .mainImageAroundLogo {
-  min-width: 900px;
+  min-width: 500px;
   max-width: 100%;
   height: auto;
   margin: 0;
 }
 
 .MainLogoCenter {
-  position: absolute;
   top: 0px;
   display: flex;
   justify-content: center;
@@ -437,13 +437,13 @@ footer {
 }
 
 .mainPictureDivHome {
-  height: 500px;
+  height: 600px;
   text-align: center;
 }
 
 .chooseSquaresHome {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   width: 100%;
 }
 
@@ -470,6 +470,47 @@ width:33%;
 padding:100px 7%;
 text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+.chooseSquaresHome {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  width: 100%;
+}
+
+.squares1 {
+/* background-color: #99C2A2; */
+background-color:beige;
+width:100%;
+min-width: 280px;
+padding:100px 7%;
+text-align: center;
+border-bottom: 1px solid grey
+}
+
+.squares2 {
+/* background-color: #6E7E85; */
+background-color:beige;
+width:100%;
+min-width: 280px;
+padding:100px 7%;
+text-align: center;
+border-bottom: 1px solid grey
+}
+
+.squares3 {
+/* background-color: #B0D0D3; */
+background-color:beige;
+width:100%;
+min-width: 280px;
+padding:100px 7%;
+text-align: center;
+border-bottom: 1px solid grey
+}
+
+}
+/* end of mobile friendly size */
 
 .homePageBtn {
   padding: 5px;
