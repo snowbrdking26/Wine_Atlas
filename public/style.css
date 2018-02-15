@@ -336,8 +336,8 @@ color: white;
 }
 
 .imgShowPage {
-    #position: relative;
-    #top: -50%;
+    position: relative;
+    top: -50%;
     margin: 0 auto;
     width: auto;
     height: auto;
@@ -448,24 +448,43 @@ footer {
 }
 
 .squares1 {
-background-color: #99C2A2;
+/* background-color: #99C2A2; */
+background-color:beige;
 width:33%;
 padding:100px 7%;
 text-align: center;
 }
 
 .squares2 {
-background-color: #6E7E85;
+/* background-color: #6E7E85; */
+background-color:beige;
 width:34%;
 padding:100px 7%;
 text-align: center;
 }
 
 .squares3 {
-background-color: #B0D0D3;
+/* background-color: #B0D0D3; */
+background-color:beige;
 width:33%;
 padding:100px 7%;
 text-align: center;
+}
+
+.homePageBtn {
+  padding: 5px;
+  border: 1px solid #c6c5c5;
+  color: black;
+  background-color: white;
+}
+
+.homePageBtn:hover {
+  background-color: rgb(188, 187, 187);
+  color: black;
+}
+
+.squareTextHome {
+  padding-bottom: 10px;
 }
 
 .modal-backdrop {
@@ -576,7 +595,7 @@ justify-content: center;
   width: auto;
 }
 
-/* comments at bottom of show page */
+/* comment-box from Bootsnip.com */
 /* https://bootsnipp.com/snippets/featured/comment-box */
 
 .widget-area.blank {
