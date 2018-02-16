@@ -452,7 +452,8 @@ footer {
 /* background-color: #99C2A2; */
 background-color:beige;
 width:33%;
-padding:100px 7%;
+padding:115px 7% 100px 7%;
+font-size:17px;
 text-align: center;
 }
 
@@ -460,7 +461,8 @@ text-align: center;
 /* background-color: #6E7E85; */
 background-color:beige;
 width:34%;
-padding:100px 7%;
+padding:50px 5%;
+font-size:17px;
 text-align: center;
 }
 
@@ -468,7 +470,8 @@ text-align: center;
 /* background-color: #B0D0D3; */
 background-color:beige;
 width:33%;
-padding:100px 7%;
+padding:50px 5%;
+font-size:17px;
 text-align: center;
 }
 
@@ -488,7 +491,7 @@ text-align: center;
 }
 
 .squareTextHome {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .modal-backdrop {
