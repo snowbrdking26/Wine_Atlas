@@ -7,41 +7,49 @@
 
 <body>
     <% include partials/nav.ejs %>
-<div class="containingImageMain">
-    <div class="MainLogoCenter">
-        <h1 class="logoh1 ">Wine Atlas</h1>
-    </div>
-</div>
-<div class="chooseSquaresHome">
-    <div class="squares1">
-        <div class="squareTextHome">Track Your Favorite Wines</div>
-        
+        <div class="containingImageMain">
+            <div class="MainLogoCenter">
+                <h1 class="logoh1 ">Wine Atlas</h1>
+            </div>
+        </div>
+
+<div class="boxes">
+    <!-- login -->
+    <div class="row1">
+        <div class="loginPictureBox"></div>
+        <div class="grapeTextBox">
+            <div class="squareTextHome">Track Your Favorite Wines</div>
             <div>
                 <a class="homePageBtn" href="/user/register">Join Member Portal</a>
-            <div>
-                <br>
-            <!-- <div class="squareTextHome"></div> -->
-                <a class="homePageBtn" href="/user/login">Login</a>
+                <div>
+                    <br>
+    
+                    <a class="homePageBtn" href="/user/login">Login</a>
+                </div>
             </div>
         </div>
-
+    
     </div>
 
-    <div class="squares3">
-        <br>
-        <!-- <a href="/wines/grape-varieties/red"> Best Wines By Grape Variety</a> -->
-        <img class="squaresImage" src="/images/purple-grapes-vineyard-napa-valley-napa-vineyard-45209.jpeg" alt="">
-         <div class="squareTextHome">Best Wines By Grape Variety</div>
-        <a class="homePageBtn" href="/wines/grape-varieties/red">View more</a>
-        </div>
-            <div class="squares2">
-                <br>
-                <!-- <a href="/wines/regions">Top Rated Wines by Country Under $20 </a> -->
-                <img class="squaresImage" src="/images/pexels-photo-12322.jpeg" alt="">
-                <div class="squareTextHome">Top Rated Wines by Country</div>
-            
-                <a class="homePageBtn" href="/wines/regions">View more</a>
-            </div>
+<div class="row2">
+    <!-- top grapes -->
+    <div class="grapePictureBox"></div>
+    <div class="grapeTextBox">
+        <div class="squareTextHome">Best Wines By Grape Variety</div>
+    <a class="homePageBtn" href="/wines/grape-varieties/red">View more</a>
+</div>
+    
+</div>
+<div class="row1">
+    <!-- top wines -->
+    <div class="winePictureBox"></div>
+    <div class="wineTextBox">
+        <div class="squareTextHome">Top Rated Wines by Country</div>
+        <a class="homePageBtn" href="/wines/regions">View more</a>
+    </div>
+    
+</div>
+
 </div>
 
 
