@@ -484,14 +484,14 @@ text-align: center;
 .row1 {
 display: flex;
 flex-direction: row;
-flex-wrap: wrap;
+flex-wrap: wrap-reverse;
 justify-content: center;
 }
 
 .row2 {
   display: flex;
 flex-direction: row-reverse;
-flex-wrap: wrap;
+flex-wrap: wrap-reverse;
 justify-content: center;
 }
 
@@ -508,7 +508,7 @@ justify-content: center;
   width:50%;
   background-color:beige;
   text-align: center;
-  padding: 150px 0 0 0; 
+  padding: 150px 20px 0 20px; 
 }
 
 .grapePictureBox {
@@ -532,7 +532,7 @@ height: 400px;
   width:50%;
   background-color:beige;
   text-align: center;
-  padding: 150px 0 0 0; 
+  padding: 150px 20px 0 20px; 
 }
 
 
@@ -1086,7 +1086,7 @@ border-bottom: 1px solid grey
 }
 
 .row2 {
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 
 
