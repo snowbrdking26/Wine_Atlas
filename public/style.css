@@ -579,7 +579,8 @@ height: 400px;
   color: black; 
   margin: 20% auto;
 	height: auto;
-	width: 90%;
+  width: 90%;
+  max-width: 530px;
   border-radius: 2px;
   text-align: left;
 }
