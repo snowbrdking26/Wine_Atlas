@@ -578,8 +578,8 @@ height: 400px;
   background-color: white;
   color: black; 
   margin: 20% auto;
-	height: 398px;
-	width: 498px;
+	height: auto;
+	width: 90%;
   border-radius: 2px;
   text-align: left;
 }
