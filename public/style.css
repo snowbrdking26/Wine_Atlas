@@ -590,6 +590,12 @@ height: 400px;
   text-align: center;
 }
 
+.footerLink {
+  color: rgb(120, 210, 255);
+  float: none;
+  text-decoration: underline;
+}
+
 /* Bootstrap modification */
 
 .container-fluid {
